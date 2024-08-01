@@ -10,9 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement>})
 {
-    const age = "XXI XXI XXI XXI XXI XXI XXI XXI XXI XXI XXI XXI XXI XXI XXI XXI XXI XXI";
+    const age = "XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX";
     const about_me = "ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME";
-    const alias = "IAMALPHACUPCAKE10IAMALPHACUPCAKE10IAMALPHACUPCAKE10";
+    const alias = "NYTRIXIS NYTRIXIS NYTRIXIS NYTRIXIS NYTRIXIS NYTRIXIS";
     const bday = "0XA330XA330XA330XA330XA330XA330XA330XA33";
 
     const parentRef = useRef<HTMLDivElement>(null);
@@ -133,7 +133,7 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
                 )
             })
 
-        }); // <- optional additional param, scopes all selector text inside the context to this component (default is document)
+        });
         
         return () => ctx.revert(); // cleanup! 
     }, []);
@@ -143,7 +143,7 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
     return (
         <div ref={props.sectionRef} className="relative">
             <ScrollIndicator>
-                <h1 className="text-xs opacity-50">Heyy Vsauce</h1>
+                <h1 className="text-xs opacity-50">Nytrixis.</h1>
             </ScrollIndicator>
             <div className='overflow-x-clip 2xl:-mb-[24rem] xl:-mb-[15rem] lg:-mb-[4rem] hidden lg:block'>
                 <div ref={parentRef} className='w-max'>
@@ -151,13 +151,13 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
                         <h3 ref ={insideRefs[0]} className='text-xl tracking-[50px] font-extrabold'>{age}</h3>
                     </div>
                     <div ref ={refs[1]} className="overflow-y-clip">
-                        <h3 ref ={insideRefs[1]} className='mt-4 text-9xl font-extrabold'>{about_me}</h3>
+                        <h2 ref ={insideRefs[1]} className='mt-4 text-9xl font-extrabold'>{about_me}</h2>
                     </div>
                     <div ref ={refs[2]} className="overflow-y-clip">
                         <h3 ref ={insideRefs[2]} className='-mt-4 text-9xl font-extrabold opacity-75'>{alias}</h3>
                     </div>
                     <div ref ={refs[3]} className="overflow-y-clip">
-                        <h3 ref ={insideRefs[3]} className='-mt-4 text-9xl font-extrabold opacity-50'>{bday}</h3>
+                        <h4 ref ={insideRefs[3]} className='-mt-4 text-9xl font-extrabold opacity-50'>{bday}</h4>
                     </div>
                     <div ref ={refs[4]} className="overflow-y-clip">
                         <h3 ref ={insideRefs[4]} className='mt-4 text-xl tracking-[50px] font-extrabold'>{age}</h3>
@@ -167,18 +167,18 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
             <div className="md:container md:mx-auto flex flex-row items-end gap-8 px-8">
                 <div className='w-full lg:w-3/4'>
                     <div className="overflow-y-clip">
-                        <h1 ref={MeRef[0]} className='text-xl sm:text-5xl font-extrabold mt-1'>LAKSHMAN <span className='gradient-text'>SUNDAR</span></h1>
+                        <h1 ref={MeRef[0]} className='text-xl sm:text-5xl font-extrabold mt-1'>NANDINI <span className='gradient-text'>PANDEY</span></h1>
                     </div>
                     <hr className='border-primary border-2 mt-4'/>
                     <div className="mt-4 flex flex-wrap gap-1">
                         {
-                            ["3D Generalist","Frontend Developer","Designer","Game Developer"].map((value,index)=>{
+                            ["3D Web Developer","Full Stack Web Developer","UI Designer","Competitive Programmer"].map((value,index)=>{
                                 return <div key={index} ref={tagsRef[index]} className="cursor-pointer fill-hover relative grow border-2 border-white/10 rounded-lg flex p-2 lg:p-4 justify-center hover:grow-[2] transition-[flex-grow] duration-300 text-xs"><span>{value}</span></div>
                             })
                         }
                     </div>
                     <p ref={MeRef[1]} className='text-justify mt-6 text-xs font-light md:text-base mb-4'>
-                        Currently working as a freelance artist, constantly interested in a challenge. I am a kind of person who likes to view things from a neutrally different and virtually inclined perspective.
+                    Hey there! I'm a fullstack web developer and designer with a knack for solving real-world problems, viewing challenges through a uniquely innovative and tech-savvy lens.
                     </p>
                 </div>
                 <div className="w-full md:w-1/2 overflow-y-clip hidden lg:block relative">

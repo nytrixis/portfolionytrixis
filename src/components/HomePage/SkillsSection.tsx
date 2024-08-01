@@ -12,37 +12,35 @@ export function SkillsSection()
                         {
                             title:"Frontend Development",
                             fields:{
-                                "React":.5,
-                                "React Three Fiber | ThreeJS":.7,                      
-                                "CSS":.75,                    
-                                "TailwindCSS":.9,
+                                "HTML":.95,
+                                "CSS":.9,  
+                                "Javascript":.9,
+                                "Typescript":.8,
+                                "React":.8,
+                                "React Three Fiber | ThreeJS":.75,                      
+                                                  
+                                "TailwindCSS":.8,
+
                             }
                         },
                         {
                             title:"Backend Development",
                             fields:{
+                                "Python":.8,
+                                "Django":.8,
                                 "NODEJS":.4,
                                 "EXPRESSJS":.5,                      
-                                "MONGODB":.6,                    
-                                "SQL":.65,
+                                "PHP":.7,                    
+                                
                             }
                         },
+                        
                         {
-                            title:"Languages",
+                            title:"Database Management",
                             fields:{
-                                "C++":.7,
-                                "Python":.65,
-                                "Javascript":.6,
-                                "Typescript":.56,
-                            }
-                        },
-                        {
-                            title:"Game Development",
-                            fields:{
-                                "C# with Unity":.9,
-                                "2D / 3D Asset Creation":.7,
-                                "Game Design":.85,
-                                "VR / AR Development":.7,      
+                                "mySQL":.8,
+                                "MongoDB":.8,
+                                
                             }
                         },
                         {
@@ -50,25 +48,28 @@ export function SkillsSection()
                             fields:{
                                 "UI Design":.8,
                                 "UX Design":.7,
-                                "Graphic Design":.8,                    
+                                                   
                             }
                         },
                         {
-                            title:"3D Design",
+                            title:"Languages",
                             fields:{
-                                "3D Modelling":.5,
-                                "Lighting & Composition":.7,
-                                "Product Animation":.9,
+                                "C++":.85,
+                                "Python":.9,
+                                "Java":.8,
                             }
                         },
+                        
                         {
-                            title:"Other Skills",
+                            title:"Tools",
                             fields:{
-                                "Motion Graphics":.6,
-                                "Video Editing":.5,
-                                "VFX":.4,
+                                "Git | Github":.8,
+                                "Netlify":.6,
+                                "Postman":.7,
+                                "Docker":.5,
                             }
                         }
+                        
                     ].map((category,index)=>{
                         return(
                             <SkillCard key={index} title={category.title} fields={category.fields}/>
