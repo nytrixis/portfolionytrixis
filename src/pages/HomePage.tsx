@@ -45,10 +45,11 @@ function HomePage() {
       <Navbar />
       <ParallaxBG>
         <div className='flex flex-col justify-center items-center'>
-          <div ref={heroTextRef[3]} className='overflow-y-clip'><h1 className='text-xl md:text-4xl opacity-80'><span className='text-accent opacity-100 font-bold'>Namaste!</span> this is </h1></div> <br />
+          <div ref={heroTextRef[3]} className='overflow-y-clip'><h1 className='text-xl md:text-4xl opacity-100'><span className='text-accent opacity-100 font-bold'>Namaste!</span> this is </h1></div> <br />
           <div ref={heroTextRef[2]} className='overflow-y-clip'><h1 className='text-3xl md:text-7xl font-extrabold uppercase'><AnimatedText delay={200} text='Nandini' /></h1></div>
+          <br /><br />
           <div ref={heroTextRef[1]} 
-          className='overflow-y-clip text-xl md:text-4xl font-bold text-accent opacity-75'><TypingEffect /></div>
+          className='overflow-y-clip text-xl md:text-4xl font-bold text-accent opacity-90'><TypingEffect /></div>
           <div ref={heroTextRef[0]} className='bg-red flex gap-5 mt-4'>
             <TransitionLink to='/3D'>
               <Button color='primary' className='md:w-48'>RESUME</Button>

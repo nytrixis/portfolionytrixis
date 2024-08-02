@@ -28,8 +28,8 @@ export function SkillsSection()
                             fields:{
                                 "Python":.8,
                                 "Django":.8,
-                                "NODEJS":.4,
-                                "EXPRESSJS":.5,                      
+                                "NODEJS":.7,
+                                "EXPRESSJS":.7,                      
                                 "PHP":.7,                    
                                 
                             }

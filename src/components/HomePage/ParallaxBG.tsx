@@ -1,5 +1,5 @@
 import { useRef, useEffect, ReactNode } from "react";
-import BG from "../../assets/BG.jpg?url";
+import BG from "../../assets/BG.png?url";
 import BGFront from "../../assets/Front.png?url";
 import BGFront2 from "../../assets/Front2.png?url";
 import Wallpaper1 from "../../assets/wallpaper1.jpg?url";
@@ -112,10 +112,9 @@ export default function ParallaxBG(props:{children:ReactNode})
                 <div ref={mainDiv} className="flex w-max gap-4 items-end">
                     <div className="h-[70vh] w-[50vw] border-2 border-white/20 rounded-2xl">
                         <img className="w-full h-full object-cover rounded-2xl" src={Wallpaper1} alt="" />
-                        {/* <video src={video} className="w-full h-full object-cover rounded-2xl" autoPlay muted loop/> */}
                     </div>
                     <div ref={centerDiv} className='relative flex h-screen w-screen flex-col justify-center items-center overflow-clip border-2 border-white/20 rounded-b-2xl'>
-                        <img className='absolute top-0 w-full h-full object-cover' src={BG} alt="" />
+                        <img className='absolute top-0 w-full h-full object-cover opacity-100' src={BG} alt="" />
                         <img ref={BGFront2Ref} className='hidden md:block absolute top-0 w-full h-full object-cover' src={BGFront2} alt="" />
                         <div className='hidden md:block absolute top-0 w-full h-full' ref={BGFrontRef}>
                             <img className='w-full h-full object-cover' src={BGFront} alt="" />
