@@ -7,40 +7,45 @@ export default function ProjectsList() {
             sectionTitle: "Web Development Projects",
             data: [
                 {
-                    title: "BUZZUP.",
-                    hoverTitle: "BUZZUP.",
-                    subTitle: "Combine images and audio for a vibrant, new social experience!",
-                    link: "https://buzzup-phi.vercel.app/"
+                    title: "DHANVANTARI",
+                    hoverTitle: "DECENTRALIZED MEDICAL PLATFORM",
+                    subTitle: "Revolutionizing healthcare with AI-powered consultations and secure, decentralized medical data management.",
+                    link: "https://github.com/nytrixis/Dhanvantari/"
+                },
+                {
+                    title: "POOZLE",
+                    hoverTitle: "E-COMMERCE WEBSITE",
+                    subTitle: "MERN implemented Shopping Website with an integrated admin panel, Fashion AI chatbot, try on feature and videos section.",
+                    link: "https://github.com/nytrixis/WeforShe24"
+                },
+                {
+                    title: "SKYCAST",
+                    hoverTitle: "WEATHER WEBAPP",
+                    subTitle: "Real Time weather magic with corresponding background changes.",
+                    link: "https://github.com/nytrixis/SkyCast"
+                },
+                {
+                    title: "SNAPLINK",
+                    hoverTitle: "CHROME EXTENSION",
+                    subTitle: "Queue in your links for future viewing.",
+                    link: "https://github.com/nytrixis/SnapLink/"
+                },
+                {
+                    title: "STARFLIX",
+                    hoverTitle: "ML PROJECT",
+                    subTitle: "Exploring celestial formations through ML",
+                    link: "https://github.com/nytrixis/StarFlix/"
                 },
                 {
                     title: "PORTFOLIO SITE",
-                    hoverTitle: "RECURSION?",
-                    subTitle: "A website to showcase all my skills and work.",
-                    link: "https://alphacupcake10-iframe-test.vercel.app/",
-                    notBlank:true
+                    hoverTitle: "RECURSION",
+                    subTitle: "A hub of all my skills and projects.",
+                    link: "",
                 },
                 {
-                    title: "REGULARISE",
-                    hoverTitle: "GET STUFF DONE",
-                    subTitle: "Get Stuff Done.",
-                    link: "https://regularise.vercel.app/"
-                },
-                {
-                    title: "SPARK",
-                    hoverTitle: "SPARK",
-                    subTitle: "Special People Achieving Remarkable Knowledge",
-                    link: "https://spark-backend-six.vercel.app/dashboard"
-                },
-                {
-                    title: "JIVANAM",
-                    hoverTitle: "LIFE.",
-                    subTitle: "Make maternal health care facilities accessible to everyone including rural and other deprived regions of India.",
-                    link: "https://jivanam.pythonanywhere.com/"
-                },
-                {
-                    title: "MORE STUFF....",
-                    hoverTitle: "MORE STUFF....",
-                    link: "https://drive.google.com/drive/folders/1VPACLToMruDkaoF7J6tsJWQqobnVXVvn?usp=drive_link"
+                    title: "MORE PROJECTS...",
+                    hoverTitle: "GITHUB PAGE",
+                    link: "https://github.com/nytrixis/"
                 },
             ]
         },
@@ -49,6 +54,7 @@ export default function ProjectsList() {
         
                
     ]
+
 
     return (
         <>
