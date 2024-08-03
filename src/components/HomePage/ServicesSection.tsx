@@ -4,6 +4,7 @@ import AnimatedText from '../common/AnimatedText';
 import UIUX from '../../assets/uiux.mp4';
 import AIML from '../../assets/AIML.mp4';
 import Td from '../../assets/3d.mp4';
+import FS from '../../assets/fullstack.mp4';
 
 const MyComponent: React.FC = () => {
     return (
@@ -33,7 +34,8 @@ const MyComponent: React.FC = () => {
                         years={2}
                         projects={2}
                         description="Pushing the boundaries of artificial intelligence and machine learning, I craft innovative solutions that transform raw data into actionable insights. From predictive analytics to natural language processing, my AIML projects harness the power of data to solve complex problems and drive decision-making."
-                        projectLink="/"
+                        projectLink={new URL("https://github.com/nytrixis").toString()}
+
                     />
                 </div>
 
@@ -49,13 +51,13 @@ const MyComponent: React.FC = () => {
                     />
 
                     <ServiceSection
-                        title="AIML DEVELOPMENT"
+                        title="FULL STACK WEB DEVELOPMENT"
                         subtitle="PROFESSIONAL"
-                        videoSrc={AIML}
-                        years={2}
-                        projects={2}
-                        description="Pushing the boundaries of artificial intelligence and machine learning, I craft innovative solutions that transform raw data into actionable insights. From predictive analytics to natural language processing, my AIML projects harness the power of data to solve complex problems and drive decision-making."
-                        projectLink="/"
+                        videoSrc={FS}
+                        years={3}
+                        projects={10}
+                        description="Mastering the art of full-stack web development, I create seamless, end-to-end solutions that bridge front-end aesthetics with back-end functionality. From crafting intuitive user interfaces to architecting robust server-side systems, I leverage cutting-edge technologies to build scalable and efficient web applications."
+                        projectLink={new URL("https://github.com/nytrixis").toString()}
                     />
                 </div>
             </div>
@@ -147,9 +149,9 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
                     </TransitionLink>
                 )}
                 {projectLink && !projectName && (
-                    <TransitionLink to={projectLink} className="inline-block bg-primary text-background px-6 py-2 rounded-full font-bold hover:bg-primary/80 transition-colors">
+                    <a href={projectLink} target="_blank" rel="noopener noreferrer" className="inline-block bg-primary text-background px-6 py-2 rounded-full font-bold hover:bg-primary/80 transition-colors">
                         View All Projects
-                    </TransitionLink>
+                    </a>
                 )}
             </div>
         </div>
