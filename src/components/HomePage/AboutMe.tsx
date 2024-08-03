@@ -10,10 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement>})
 {
-    const age = "XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX";
-    const about_me = "ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME";
+    const age = "CODER SINCE 2018 CODER SINCE 2018 CODER SINCE 2018 CODER SINCE 2018 CODER SINCE 2018";
+    const about_me = "ABOUT ME  ABOUT ME  ABOUT ME  ABOUT ME  ABOUT ME ";
     const alias = "NYTRIXIS NYTRIXIS NYTRIXIS NYTRIXIS NYTRIXIS NYTRIXIS";
-    const bday = "0XA330XA330XA330XA330XA330XA330XA330XA33";
+    const bday = "INNOVATION JUNKIE INNOVATION JUNKIE INNOVATION JUNKIE INNOVATION JUNKIE INNOVATION JUNKIE INNOVATION JUNKIE INNOVATION JUNKIE ";
 
     const parentRef = useRef<HTMLDivElement>(null);
     const refs = [useRef<HTMLHeadingElement>(null),useRef<HTMLHeadingElement>(null),useRef<HTMLHeadingElement>(null),useRef<HTMLHeadingElement>(null),useRef<HTMLHeadingElement>(null)];
@@ -27,23 +27,28 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
     useEffect(() => {        
         let ctx = gsap.context(() => {
             
-            refs.forEach((ref,index)=>{
+            refs.forEach((ref, index) => {
                 gsap.fromTo(
-                    ref.current,{
-                        xPercent:-5 - 2 * index
+                    ref.current,
+                    {
+                        xPercent: -5 - 2 * index,
+                        yPercent: 50 - 10 * index,
+                        opacity: 1 - 0.1 * index
                     },
                     {
-                        xPercent:0,
-                        scrollTrigger:{
-                            trigger:parentRef.current,
-                            start:"top 100%",
-                            end:"bottom top",
-                            scrub:true,
-                            // markers:true
+                        xPercent: 0,
+                        yPercent: 0,
+                        opacity: 1,
+                        scrollTrigger: {
+                            trigger: parentRef.current,
+                            start: "top 100%",
+                            end: "bottom top",
+                            scrub: true,
                         }
                     }
                 )
             })
+            
             insideRefs.forEach((ref,index)=>{
                 gsap.from(
                     ref.current,{
@@ -146,22 +151,26 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
                 <h1 className="text-xs opacity-50">Nytrixis.</h1>
             </ScrollIndicator>
             <div className='overflow-x-clip 2xl:-mb-[24rem] xl:-mb-[15rem] lg:-mb-[4rem] hidden lg:block'>
-                <div ref={parentRef} className='w-max'>
-                    <div ref ={refs[0]} className="overflow-y-clip">
-                        <h3 ref ={insideRefs[0]} className='text-xl tracking-[50px] font-extrabold'>{age}</h3>
-                    </div>
-                    <div ref ={refs[1]} className="overflow-y-clip">
-                        <h2 ref ={insideRefs[1]} className='mt-4 text-9xl font-extrabold'>{about_me}</h2>
-                    </div>
-                    <div ref ={refs[2]} className="overflow-y-clip">
-                        <h3 ref ={insideRefs[2]} className='-mt-4 text-9xl font-extrabold opacity-75'>{alias}</h3>
-                    </div>
-                    <div ref ={refs[3]} className="overflow-y-clip">
-                        <h4 ref ={insideRefs[3]} className='-mt-4 text-9xl font-extrabold opacity-50'>{bday}</h4>
-                    </div>
-                    <div ref ={refs[4]} className="overflow-y-clip">
-                        <h3 ref ={insideRefs[4]} className='mt-4 text-xl tracking-[50px] font-extrabold'>{age}</h3>
-                    </div>
+            <div ref={parentRef} className='w-max'>
+                <div ref={refs[0]} className="overflow-y-clip">
+                    <h4 ref={insideRefs[0]} className='text-3xl tracking-[30px] font-extrabold'>{age}</h4>
+                </div>
+                <div ref={refs[1]} className="overflow-y-clip">
+                    <h2 ref={insideRefs[1]} className='mt-4 text-7xl font-extrabold'>{about_me}</h2>
+                </div>
+                <br />
+                <div ref={refs[2]} className="overflow-y-clip">
+                    <h2 ref={insideRefs[2]} className='-mt-4 text-7xl font-extrabold opacity-75'>{alias}</h2>
+                </div>
+                <br />
+                <div ref={refs[3]} className="overflow-y-clip">
+                    <h2 ref={insideRefs[3]} className='-mt-4 text-7xl font-extrabold opacity-50'>{bday}</h2>
+                </div>
+                <br />
+                <div ref={refs[4]} className="overflow-y-clip">
+                    <h4 ref={insideRefs[4]} className='mt-4 text-3xl tracking-[20px] font-extrabold'>{age}</h4>
+                </div>
+                <br />
                 </div>
             </div>
             <div className="md:container md:mx-auto flex flex-row items-end gap-8 px-8">
@@ -178,7 +187,7 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
                         }
                     </div>
                     <p ref={MeRef[1]} className='text-justify mt-6 text-xs font-light md:text-base mb-4'>
-                    Hey there! I'm a fullstack web developer and designer with a knack for solving real-world problems, viewing challenges through a uniquely innovative and tech-savvy lens.
+                    Innovative CSE undergrad at Dr. B.C. Roy Engineering College (2026), I'm a passionate Full Stack Web Developer with a flair for AI. My technical prowess shines through Hackathon achievements and personal projects. Beyond coding, I'm a decorated public speaker. With a unique blend of technical expertise and leadership skills, I'm poised to make significant contributions to the tech world. Let's connect and create something extraordinary!
                     </p>
                 </div>
                 <div className="w-full md:w-1/2 overflow-y-clip hidden lg:block relative">

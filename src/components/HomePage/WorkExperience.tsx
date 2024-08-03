@@ -1,112 +1,161 @@
-import { ReactNode, RefObject, useEffect, useRef } from "react"
+import React, { ReactNode, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { IconCode, IconRobot, IconClipboardList } from '@tabler/icons-react';
 
-function WorkExperience()
-{
-    const experience = [
-        {
-            title: "STUDIO FOUR EIGHT SEVEN",
-            hoverTitle: "FRONT-END DEVELOPER",
-            type: "INTERN",
-            subTitle: <>
-                <h1 className="font-bold">AUG 2023 - OCT 2023</h1>
-                <div className="mt-4">Shopify Ecosystem, Shopify Liquid Templating, Shopify Ajax API, Component Creation for Shopify Theme Editor <br className="mt-4"/>Brands I've worked with:GetVitalPlus,YesYouCanDrinks</div>
-            </>,
-            link: "https://www.linkedin.com/company/foureightseven/about/"
-        },
-        {
-            title: "FIVERR",
-            hoverTitle: "PRODUCT ANIMATOR",
-            type: "FREELANCE",
-            subTitle: <>
-                <h1 className="font-bold">SEPT 2021 - PRESENT</h1>
-                <div className="mt-4">
-                    <ul className="">
-                        <li>Seller in the 3D Product Animations Sub Category.</li>
-                        <li>Worked on 50+ individual Projects with 40+ different clients.</li>
-                        <li>The trailers were covered in reputable online articles and reached 100k + views on YouTube</li>
-                    </ul>
-                </div>
-            </>,
-            link: "https://www.fiverr.com/alphacupcake"
-        },
-        {
-            title: "TROPPOLO",
-            hoverTitle: "UI | UX DESIGN",
-            type: "INTERN",
-            subTitle: <>
-                <h1 className="font-bold">APRIL 2023 - JUNE 2023</h1>
-                <div className="mt-4">
-                    <ul>
-                        <li>Designed 14+ screens for the mobile app in Figma.</li>
-                        <li>Devised an elaborate UX system for the specific needs of the Mobile App.</li>
-                    </ul>
-                </div>
-            </>,
-            link: ""
+gsap.registerPlugin(ScrollTrigger);
+
+type Experience = {
+  title: string;
+  hoverTitle: string;
+  type: string;
+  subTitle: ReactNode;
+  link: string;
+  icon: React.ComponentType<{ size?: number; stroke?: number; className?: string }>;
+};
+
+const WorkExperience: React.FC = () => {
+  const experience: Experience[] = [
+    {
+      title: "AGRA EXPRESS",
+      hoverTitle: "WEB DEVELOPER",
+      type: "FREELANCE",
+      icon: IconCode as React.ComponentType<{ size?: number; stroke?: number; className?: string }>,
+      subTitle: (
+        <>
+          <h1 className="font-bold">JUL 2024 - AUG 2024</h1>
+          <div className="mt-4">
+          Developed the official website for Agra Express, a Travel Operator based  in New Delhi, by designing user friendly interfaces for web
+          integrating Mobile Responsiveness.
+            <br className="mt-4" />
+            Implemented booking systems leading to a 200% increase in the first month itself.
+          </div>
+        </>
+      ),
+      link: "https://master--agraexpress.netlify.com",
+      
+    },
+    {
+      title: "AVALANCHE DAO",
+      hoverTitle: "RESEARCH MANAGEMENT",
+      type: "JUNIOR INTERN",
+      icon: IconClipboardList as React.ComponentType<{ size?: number; stroke?: number; className?: string }>,
+      subTitle: (
+        <>
+          <h1 className="font-bold">JUN 2024 - AUG 2024</h1>
+          <div className="mt-4">
+            <ul>
+              <li>Successfully conducted preliminary research and gathered relevant data improving accuracy by 20%.</li>
+              <li>Gathered relevant information on contracts
+              building.</li>
+            </ul>
+          </div>
+        </>
+      ),
+      link: "https://www.fiverr.com/alphacupcake",
+    },
+    {
+      title: "1STOP.AI",
+      hoverTitle: "AIML",
+      type: "INTERN",
+      icon: IconRobot as React.ComponentType<{ size?: number; stroke?: number; className?: string }>,
+      subTitle: (
+        <>
+          <h1 className="font-bold">AUG 2023 - SEP 2023</h1>
+          <div className="mt-4">
+            <ul>
+              <li>Conducted extensive data preprocessing including image augmentation, normalization, and noise reduction to improve model performance and robustness.</li>
+              <li>
+              Built and implemented basic face detection
+              models using OpenCV.
+              </li>
+            </ul>
+          </div>
+        </>
+      ),
+      link: "",
+    },
+  ];
+
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const experienceRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      experienceRefs.current.forEach((ref, index) => {
+        if (ref) {
+          gsap.from(ref, {
+            x: index % 2 === 0 ? -100 : 100,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: ref,
+              start: "top bottom-=100",
+              end: "top center",
+              scrub: 1,
+            },
+          });
         }
-    ]
-    const compRefs = [useRef<HTMLAnchorElement>(null),useRef<HTMLAnchorElement>(null),useRef<HTMLAnchorElement>(null)]
-    useEffect(()=>{
-        let ctx = gsap.context(() => {
-            compRefs.forEach((ref,index)=>{
-                if(ref.current === null)return;
-                gsap.from(
-                    ref.current,{
-                        yPercent:100,
-                        opacity:0,
-                        ease:"power4.out",
-                        delay:index*.1,
-                        duration:1,
-                        scrollTrigger:{
-                            trigger:ref.current,
-                            start:"top 100%",
-                            end:"bottom top",
-                            // scrub:true,
-                            // markers:true
-                        }
-                    }
-                )
-            })
-        })
-        return () => ctx.revert(); // cleanup! 
-    },[])
+      });
+    }, sectionRef);
 
-    return (
-        <section className="my-24">
-            <h1 className="container px-8 mx-auto font-bold text-primary text-3xl mb-8">WORK EXPERIENCE</h1>
-            {
-                experience.map((val, key) => {
-                    return (
-                        <Comp refElement={compRefs[key]} val={val} key={key}></Comp>
-                    )
-                })
-            }
-        </section>
-    )
-}
+    return () => ctx.revert();
+  }, []);
 
-function Comp(props:{val:{title: string,hoverTitle: string,subTitle: ReactNode,link: string,type:string},refElement:RefObject<HTMLAnchorElement>})
-{
   return (
-    <a ref={props.refElement} href={props.val.link} target="_blank" className="py-8 px-4 2xl:py-0 block overflow-clip group border-b-2 border-text/10 cursor-pointer relative after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-primary after:origin-bottom hover:after:origin-left after:-z-10 after:duration-500 after:transition-transform after:scale-y-0 hover:after:scale-y-100">
-        <div className="container relative mx-auto flex flex-col 2xl:flex-row 2xl:justify-between 2xl:items-center">
-            <div className="2xl:py-8 2xl:group-hover:-translate-y-full duration-500">
-                <h1 className="flex items-center gap-8"><span className="text-xl md:text-5xl lg:text-7xl font-bold tracking-tighter">{props.val.title}</span><span className="font-bold opacity-70">{props.val.type}</span></h1>
-            </div>
-            <div className="2xl:py-8 2xl:hidden opacity-70">
-                <h1 className="flex items-center gap-8"><span className="text-md md:text-xl lg:text-3xl font-bold tracking-tighter">{props.val.hoverTitle}</span></h1>
-            </div>
-            <div className="hidden 2xl:flex flex-col justify-center translate-y-full group-hover:translate-y-0 absolute top-0 left-0 w-full h-full duration-500">
-                <h1 className="flex items-center gap-8"><span className="text-xl md:text-5xl lg:text-7xl font-bold tracking-tighter">{props.val.title}</span><span className="font-bold opacity-70">{props.val.type}</span></h1>
-                <h1 className="flex items-center gap-8 opacity-80"><span className="text-md md:text-xl lg:text-3xl font-bold tracking-tighter">{props.val.hoverTitle}</span></h1>
-            </div>
-            <div className="2xl:py-8 w-full 2xl:w-96 text-xs md:text-sm opacity-90">
-                {props.val.subTitle}
-            </div>
+    <section
+      ref={sectionRef}
+      className="py-24 bg-gradient-to-b from-background to-background/50"
+    >
+      <div className="container mx-auto px-4 overflow-x-hidden max-w-full">
+        <h1 className="text-6xl font-bold text-primary mb-12 text-center">
+          WORK EXPERIENCE
+        </h1>
+        <div className="space-y-16">
+          {experience.map((job, index) => (
+            <ExperienceCard
+              key={index}
+              job={job}
+              ref={(el) => (experienceRefs.current[index] = el)}
+              isEven={index % 2 === 0}
+            />
+          ))}
         </div>
-    </a>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default WorkExperience
+type ExperienceCardProps = {
+  job: Experience;
+  isEven: boolean;
+};
+
+const ExperienceCard = React.forwardRef<HTMLDivElement, ExperienceCardProps>(
+  ({ job, isEven }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={`flex flex-col md:flex-row ${
+          isEven ? "md:flex-row-reverse" : ""
+        } items-center gap-8`}
+      >
+        <div className="w-full md:w-1/2">
+          <h2 className="text-2xl font-bold text-accent mb-2">{job.title}</h2>
+          <h3 className="text-xl text-accent mb-4">{job.hoverTitle}</h3>
+          <span className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm mb-4">
+            {job.type}
+          </span>
+          <div className="text-xl opacity-80 overflow-x-hidden">{job.subTitle}</div>
+        </div>
+        <div className="w-full md:w-1/2 aspect-video bg-primary/10 rounded-lg flex items-center justify-center ">
+        {job.icon && <job.icon size={100} stroke={1.5} />}
+        </div>
+    
+      </div>
+    );
+  }
+);
+
+export default WorkExperience;
