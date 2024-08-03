@@ -36,58 +36,6 @@ export default function ProjectsList() {
                     hoverTitle: "LIFE.",
                     subTitle: "Make maternal health care facilities accessible to everyone including rural and other deprived regions of India.",
                     link: "https://jivanam.pythonanywhere.com/"
-                }
-            ]
-        },
-        {
-            sectionTitle: "Game Development Projects",
-            data: [
-                {
-                    title: "DIVING TEMPEST.",
-                    hoverTitle: "PLAY ON YOUR BROWSER",
-                    subTitle: "A fast paced action adventure 2D platformer with parkour mechanics and Sci-Fi Lore",
-                    link: "https://alphacupcake10.vercel.app/game"
-                },
-                {
-                    title: "LIGHT FRAGMENT",
-                    hoverTitle: "OHH SHINEY",
-                    subTitle: "A 2D top down shooter with abstract graphics.",
-                    link: "https://youtu.be/LjXXAwHXpro?si=BhOGZC5NXT37nv1M"
-                }
-            ]
-        },
-        {
-            sectionTitle: "3D Animation Projects",
-            data: [
-                {
-                    title: "FRESCO XL",
-                    hoverTitle: "FREELANCE",
-                    subTitle: "The trailer was covered in reputable online articles and reached 100k + views on YouTube",
-                    link: "https://youtu.be/jbCRmvzX6rg?si=FabNkOsJFhtBCrgY"
-                },
-                {
-                    title: "MEET EGGZY",
-                    hoverTitle: "EGGZY GOT LEGGZY",
-                    subTitle: "A Short CGI Animation. All Modeled, Rigged , Animated and Rendered in Blender.",
-                    link: "https://youtu.be/9LXVEXdaix8?si=f2vKLNXN2ZGiknu7"
-                },
-                {
-                    title: "QUANTUM THRUST",
-                    hoverTitle: "BRRRRR",
-                    subTitle: "I tried to remake an old animation I made in 2019.",
-                    link: "https://youtu.be/91xYJy3Mzm4?si=fc05VWGXGkGwJWAz"
-                },
-                {
-                    title: "DEZI SHIFT",
-                    hoverTitle: "OOOOOOO",
-                    subTitle: "Futuristic Shoe Mockup in Blender",
-                    link: "https://youtu.be/MhXs1C7o6iY?si=P5vZfrIs7tS4DquC"
-                },
-                {
-                    title: "STRANDED",
-                    hoverTitle: "IN SPACE",
-                    subTitle: "Playing with realtime volumetrics with procedurally generated nebulae",
-                    link: "https://youtu.be/2SW8swB77iY?si=oSCVZ-jL9BbIALyB"
                 },
                 {
                     title: "MORE STUFF....",
@@ -95,7 +43,11 @@ export default function ProjectsList() {
                     link: "https://drive.google.com/drive/folders/1VPACLToMruDkaoF7J6tsJWQqobnVXVvn?usp=drive_link"
                 },
             ]
-        }
+        },
+        
+        
+        
+               
     ]
 
     return (

@@ -12,7 +12,6 @@ import Footer from '../components/Footer';
 import WorkExperience from '../components/HomePage/WorkExperience';
 import ServicesSection from '../components/HomePage/ServicesSection';
 import { SkillsSection } from '../components/HomePage/SkillsSection';
-// import { useLenis } from '@studio-freight/react-lenis';
 gsap.registerPlugin(ScrollTrigger);
 
 function HomePage() {

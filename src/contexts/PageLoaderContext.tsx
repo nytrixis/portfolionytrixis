@@ -1,7 +1,6 @@
 import { useLenis } from "@studio-freight/react-lenis";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { LinkProps, To, useLocation, useNavigate } from "react-router-dom";
-import wat from "../assets/wat.png?url";
 import axios from "../axios";
 
 type PageLoaderContextType = {
@@ -145,7 +144,7 @@ export function PageLoaderProvider(props: { children: React.ReactNode }) {
             )
         }
         <div ref={catIMG} onClick={() => { lenis.scrollTo(0) }} className={`group fixed right-0 translate-y-full duration-500 bottom-0 z-[45] hover:translate-y-0 transition-all`}>
-            <img src={wat} className="relative z-10" alt="wat"/>
+
             <div
                 className="ease-in duration-300 opacity-0 group-hover:block group-hover:opacity-100 transition-all -z-10"
             >
