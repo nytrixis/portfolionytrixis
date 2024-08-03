@@ -50,9 +50,10 @@ function HomePage() {
           <div ref={heroTextRef[1]} 
           className='overflow-y-clip text-xl md:text-4xl font-bold text-accent opacity-90'><TypingEffect /></div>
           <div ref={heroTextRef[0]} className='bg-red flex gap-5 mt-4'>
-            <TransitionLink to='/3D'>
-              <Button color='primary' className='md:w-48'>RESUME</Button>
-            </TransitionLink>
+          <a href='/assets/Nandini_Resume.pdf' download>
+            <Button color='primary' className='md:w-48'>RESUME</Button>
+          </a>
+
             <TransitionLink to='/projects'>
               <Button color='secondary' className='md:w-48'>PROJECTS</Button>
             </TransitionLink>
