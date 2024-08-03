@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedText from '../components/common/AnimatedText';
 import TypingEffect from '../components/common/TypingEffect';
 import Footer from '../components/Footer';
+import EduExperience from '../components/HomePage/EducationalExperience';
 import WorkExperience from '../components/HomePage/WorkExperience';
 import ServicesSection from '../components/HomePage/ServicesSection';
 import { SkillsSection } from '../components/HomePage/SkillsSection';
@@ -61,6 +62,7 @@ function HomePage() {
         </div>
       </ParallaxBG>
       <AboutMe sectionRef={aboutMeRef} />
+      <EduExperience />
       <WorkExperience />
       <SkillsSection />
       <ServicesSection />
