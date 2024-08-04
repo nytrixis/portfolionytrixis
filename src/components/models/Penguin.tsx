@@ -5,6 +5,7 @@ import { Suspense, useEffect, useRef } from 'react';
 import { AnimationMixer, Mesh } from 'three';
 import modelSrc from "../../assets/penguin.gltf?url";
 
+
 export default function Bee(props:{CanvasRef:React.RefObject<HTMLDivElement>})
 {
     const gltf = useGLTF(modelSrc);
