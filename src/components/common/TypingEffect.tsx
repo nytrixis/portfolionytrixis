@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './TypingEffect.css';
 
-const roles: string[] = ["Web Developer", "Coder", "Designer"];
+const roles: string[] = ["Web Developer", "Coder", "UI/UX Designer"];
 
 const TypingEffect: React.FC = () => {
   const [index, setIndex] = useState<number>(0);
