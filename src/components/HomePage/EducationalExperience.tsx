@@ -94,7 +94,7 @@ const EducationalExperience: React.FC = () => {
               <div className="absolute left-[-5px] top-0 h-full border-l-2 border-transparent"></div>
               <div className="relative bg-background pl-10">
                 <h3 className="font-semibold text-3xl text-accent">Carmel School, Steel Township, Durgapur</h3> <br />
-                <p className='text-xl'>Higher Education - ICSE</p><br />
+                <p className='text-xl'>Secondary Education - ICSE</p><br />
                 <p className='text-primary'>2007-2020</p>
               </div>
             </div>
