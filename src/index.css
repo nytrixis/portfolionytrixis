@@ -138,8 +138,6 @@ body
 }
 .cursor
 {
-  /* opacity: .3; */
-  /* filter: blur(200px); */
   animation: spin 3s infinite linear;
   translate: -50% -50%;
 }
@@ -147,4 +145,36 @@ body
 {
   animation: spin 20s infinite ease;
   border-radius: 440rem;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a1015;
+  color: #fff;
+  overflow: hidden;
+}
+
+.loading-text {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px #CCFFFF;
+  animation: fillText 3s forwards;
+}
+
+@keyframes fillText {
+  0% {
+    color: transparent;
+    -webkit-text-stroke: 1px #CCFFFF;
+  }
+  100% {
+    color: #CCFFFF;
+    -webkit-text-stroke: 0;
+  }
 }
