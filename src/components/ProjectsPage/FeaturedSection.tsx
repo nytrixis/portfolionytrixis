@@ -124,11 +124,11 @@ export default function FeaturedSection()
 
                 <div className="w-[100vw] h-full relative flex flex-col md:flex-row sm:justify-center items-center p-4 lg:px-32 xl:px-64">
                     {/* <ModelCanvas className=''/> */}
-                    <div className='w-full h-96' ref={ref}>
+                    {/* <div className='w-full h-96' ref={ref}>
                         <Canvas camera={{fov:35,position:[0,0,6]}}>
                             <Penguin CanvasRef={ref}/>
                         </Canvas>
-                    </div>
+                    </div> */}
                     <img src={BUZZUPBG} className="absolute top-0 left-0 -z-20 w-full h-full object-cover"/>
                     <div className="w-full flex flex-col justify-center">
                     <h1 className='animate left font-black text-5xl md:text-5xl leading-tight'>That's all<span className='text-accent'>.</span></h1>
