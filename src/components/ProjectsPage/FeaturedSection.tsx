@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import BUZZUPBG from '../../assets/Buzzup.jpg'
 import Button from '../common/Button'
-import { Canvas } from '@react-three/fiber';
+// import { Canvas } from '@react-three/fiber';
 
 import  TD from '../../assets/tds.mp4';
 import DV from '../../assets/dhanvantari.png';
-import Penguin from '../models/Penguin';
+// import Penguin from '../models/Penguin';
 export default function FeaturedSection()
 {
     const [phaseIndex,setPhaseIndex] = useState(0);
-    const ref = useRef<HTMLDivElement>(null)
+    // const ref = useRef<HTMLDivElement>(null)
     const phases = ['STARFLIX','DV',"PENGUIN"];
 
     useEffect(()=>{
