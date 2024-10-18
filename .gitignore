@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 *.blend
 *.blend1
+
+src/assets/textures/MAT_Penguin_baseColor.png
+src/assets/astronaut
+src/assets/penguin.gltf
+src/assets/scene.bin
